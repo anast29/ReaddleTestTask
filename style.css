@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap');
+body {
+    height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+header {
+    display: flex ;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    background: #1e1433;
+    height: 100px;
+    color: white;
+}
+
+main {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    padding: 2.5em 2em ;
+    box-sizing: border-box;
+}
+h1 {
+    letter-spacing: 0.5px;
+    font-weight: 400;
+}
+.download-image {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    padding: 0 3em;
+    box-sizing: border-box;
+}
+.download-image-btn {
+    position: relative;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 2em 3em;
+    box-sizing: border-box;
+}
+input[type="file"] {
+   display: none;
+}
+label::before {
+    position: absolute;
+    width: 325px;
+    top: 0;
+    content: "Your file";
+    font-size: 20px;
+    font-weight: 300;
+    color: #8c8787;
+    border-bottom: 2px solid #e4e4e4;
+}
+label {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    transition: 600ms;
+    border: 1px solid #1e1433;
+    border-radius: 5em;
+    height: 50px;
+    width: 150px;
+    margin-top: 0.75em;
+    cursor: pointer;
+}
+label:hover {
+    background: #1e1433;
+    color: white;
+}
+canvas {
+    width: 100%;
+    border: 1px solid black;
+}
