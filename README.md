@@ -1,1 +1,1 @@
-"# ReaddleTestTask" 
+"ReaddleTestTask" 
