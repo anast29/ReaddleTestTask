@@ -1,1 +1,3 @@
-"ReaddleTestTask" 
+# ReaddleTestTask
+
+ Image concatenation app.
