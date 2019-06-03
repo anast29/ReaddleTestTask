@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const ohorizontal = document.getElementById('horizontal');
     var flag, bool;
     var fimg = new Image();
+
     var simg = new Image();
 
     overtical.onchange = function () {
