@@ -1,28 +1,28 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap');
-body {
-    height: 100vh;
-    font-family: 'Montserrat', sans-serif;
+html, body {
+    width:  100%;
+    height: 100%;
     margin: 0;
-    padding: 0;
+    font-family: 'Montserrat', sans-serif;
     box-sizing: border-box;
-
 }
-
 header {
-    display: flex ;
-    flex-flow: row nowrap;
-    justify-content: center;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
     align-items: center;
     background: #1e1433;
     height: 100px;
     color: white;
+    padding: 0 2em;
 }
 
 main {
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
-    padding: 2.5em 2em ;
+    align-items: center;
+    padding: 2em 2em 0;
     box-sizing: border-box;
 }
 h1 {
@@ -34,6 +34,7 @@ h1 {
     flex-flow: row wrap;
     justify-content: space-around;
     padding: 0 3em;
+    width: 100%;
     box-sizing: border-box;
 }
 .download-image-btn {
@@ -42,22 +43,13 @@ h1 {
     flex-flow: column wrap;
     justify-content: center;
     align-items: center;
-    padding: 2em 3em;
+    padding: 0 3em 2em;
     box-sizing: border-box;
 }
 input[type="file"] {
    display: none;
 }
-label::before {
-    position: absolute;
-    width: 325px;
-    top: 0;
-    content: "Your file";
-    font-size: 20px;
-    font-weight: 300;
-    color: #8c8787;
-    border-bottom: 2px solid #e4e4e4;
-}
+
 label {
     display: flex;
     flex-flow: column;
@@ -74,8 +66,4 @@ label {
 label:hover {
     background: #1e1433;
     color: white;
-}
-canvas {
-    width: 100%;
-    border: 1px solid black;
 }

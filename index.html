@@ -1,28 +1,130 @@
 <head>
     <meta charset="utf-8">
     <title> Tesk Task</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
     <script src="main.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap');
+        html, body {
+            width:  100%;
+            height: 100%;
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            box-sizing: border-box;
+        }
+        header {
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: flex-start;
+            align-items: flex-start;
+            background: #1e1433;
+            height: 100px;
+            color: white;
+            padding: 0 2em;
+        }
+
+        main {
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: center;
+            align-items: center;
+            padding: 2em 2em 0;
+            box-sizing: border-box;
+        }
+        h1 {
+            letter-spacing: 0.5px;
+            font-weight: 400;
+            margin-bottom: 0;
+        }
+        h3 {
+            font-weight: 300;
+            margin-right: 0.25em;
+        }
+        span {
+            font-weight: 200;
+        }
+        .block {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-around;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .download-image, .orientation  {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-around;
+            align-items: center;
+            box-sizing: border-box;
+        }
+
+        input[type="file"], input[type="radio"] {
+            display: none;
+        }
+
+        label {
+            display: flex;
+            flex-flow: column;
+            justify-content: center;
+            align-items: center;
+            transition: 600ms;
+            border: 1px solid #1e1433;
+            border-radius: 5em;
+            height: 40px;
+            width: 115px;
+            margin: 0 0.25em;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        label:hover {
+            background: #1e1433;
+            color: white;
+        }
+        input[type="radio"]:not(:checked) + label {
+            background: none;
+            color: #000;
+        }
+
+        input[type="radio"]:checked + label {
+            background: #1e1433;
+            color: white;
+        }
+    </style>
 </head>
 <body>
 <header>
     <h1>Image Viewer</h1>
+    <span>Ivanova Anastasiia for Readdle</span>
 </header>
 <main>
-    <div class="download-image">
-        <div class="download-image-btn">
-            <label for="first-image">
-                <input type="file" id="first-image" name="first-image" accept=".jpg, .jpeg, .png" >
-                Chose image
+    <div class="block">
+        <div class="download-image">
+            <h3>Chose image:</h3>
+                <label for="first-image">
+                    <input type="file" id="first-image" name="first-image" accept=".jpg, .jpeg, .png">
+                    First image
+                </label>
+                <label for="second-image">
+                    <input type="file" id="second-image" name="second-image" accept=".jpg, .jpeg, .png">
+                    Second image
+                </label>
+        </div>
+        <div class="orientation">
+            <h3>Chose orientation:</h3>
+            <input type="radio" id="vertical" name="radio-button">
+            <label for="vertical">
+                Vertical
+            </label>
+
+            <input type="radio" id="horizontal" name="radio-button" checked>
+            <label for="horizontal">
+                Horizontal
             </label>
         </div>
-        <div class="download-image-btn">
-            <input type="file" id="second-image" name="second-image" accept=".jpg, .jpeg, .png">
-            <label for="second-image"> Chose image</label>
-        </div>
     </div>
-    <canvas id="canvas-content">
+
+    <canvas id="canvas-content" width="950" height="300">
 
     </canvas>
+
 </main>
 </body>
